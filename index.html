@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Flux Todo</title>
+    <meta name="description" content="A sleek, modern, and high-performance Todo application for your daily productivity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 id="app-title">Flux Todo</h1>
+            <p class="subtitle">Stay organized, stay focused.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-wrapper">
+                    <input type="text" id="todo-input" placeholder="What needs to be done?" aria-label="Add a new task">
+                    <button id="add-btn" aria-label="Add Todo">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                </div>
+            </section>
+
+            <section class="filter-section">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                    <button class="filter-btn" data-filter="active" id="filter-active">Active</button>
+                    <button class="filter-btn" data-filter="completed" id="filter-completed">Completed</button>
+                </div>
+                <div class="stats">
+                    <span id="items-left">0 items left</span>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <ul id="todo-list" class="todo-list">
+                    <!-- Tasks will be injected here -->
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <button id="clear-completed" class="clear-btn">Clear Completed</button>
+        </footer>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="bg-gradient"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
